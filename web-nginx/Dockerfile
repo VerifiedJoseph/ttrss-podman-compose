@@ -1,4 +1,4 @@
-FROM nginx:alpine
+FROM nginx:1.24.0-alpine3.17-slim
 
 HEALTHCHECK CMD curl --fail http://localhost/tt-rss/index.php || exit 1
 
