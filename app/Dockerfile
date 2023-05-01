@@ -1,4 +1,4 @@
-FROM alpine:3.17
+FROM alpine:3.17.3
 EXPOSE 9000/tcp
 
 ENV SCRIPT_ROOT=/opt/tt-rss
