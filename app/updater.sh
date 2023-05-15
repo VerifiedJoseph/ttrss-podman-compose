@@ -28,7 +28,7 @@ while ! pg_isready -h $TTRSS_DB_HOST -U $TTRSS_DB_USER; do
 done
 
 sed -i.bak "s/^\(memory_limit\) = \(.*\)/\1 = ${PHP_WORKER_MEMORY_LIMIT}/" \
-	/etc/php81/php.ini
+	/etc/php82/php.ini
 
 DST_DIR=/var/www/html/tt-rss
 
@@ -37,4 +37,4 @@ while [ ! -s $DST_DIR/config.php -a -e $DST_DIR/.app_is_ready ]; do
 	sleep 3
 done
 
-sudo -E -u app /usr/bin/php81 /var/www/html/tt-rss/update_daemon2.php
+sudo -E -u app /usr/bin/php82 /var/www/html/tt-rss/update_daemon2.php
