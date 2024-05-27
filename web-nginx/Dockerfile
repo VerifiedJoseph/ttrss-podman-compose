@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1.25.4-alpine3.18-slim
+FROM nginxinc/nginx-unprivileged:1.25.5-alpine3.19-slim
 
 HEALTHCHECK CMD curl --fail http://localhost/tt-rss/index.php || exit 1
 
